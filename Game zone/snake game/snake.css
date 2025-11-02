@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+.container::before {
+    content: "";
+    background: url("snake.jpg");
+    opacity: 0.76;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+}
+
+.begin, .game {
+    position: relative;
+    z-index: 1;
+}
+
+.begin {
+    height: 95%;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.begin,
+.game {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Game board */
+.game {
+  display: none;
+  height:90vmin;
+  width: 90vmin;
+  background-image: linear-gradient(orange, rgb(201, 67, 67));
+  border: 2px solid black;
+  grid-template-columns: repeat(18, 1fr);
+  grid-template-rows: repeat(18, 1fr);
+}
+.begin h1 {
+    color: orangered;
+    border: 2px dashed rgb(210, 75, 75);
+    margin-bottom: 40px;
+    font-size: 10vmin;
+}
+
+.begin p {
+    color: red;
+    margin-top: 20px;
+    font-size: 5vmin;
+    font-weight: bolder;
+}
+
+#scorebox
+{
+    position:absolute;
+    font-size:40px;
+    top:10px;
+    right:200px;
+    font-weight: bolder;
+
+}
+
+#start {
+    border: none;
+    background-image: linear-gradient(blue, lightblue);
+    padding: 10px 20px;
+    font-style: italic;
+    font-weight: bold;
+    margin-top: 10px;
+    border-radius: 20%;
+    cursor: pointer;
+    color: white;
+}
+/*snake and food*/
+.food {
+    background-color: white;
+    border-radius: 50%;
+}
+.snake{
+    background-color:yellowgreen;
+    border-radius: 10px;
+}
+.snake-head{
+    background-color: green;
+    border: 4px black;
+    border-radius:50%;
+}
+

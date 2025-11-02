@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock-paper-scissors</title>
+    <link rel="stylesheet" href="rockpaper.css">
+</head>
+<body>
+     
+    <h1> Rock-paper-scissors</h1>
+    <div class="game">
+    <button class="option" id="rock" onclick="light(event)"><img src="rock.jpg" alt="rock"></button> 
+    <button class="option" id="paper" onclick="light(event)"><img src="paper.jpg" alt="paper"></button> 
+    <button class="option" id="scissors" onclick="light(event)"><img src="scisors.jpg" alt="scisors"></button> 
+    
+    </div> 
+    <center><h3 style="padding: 3px; margin:7px;">Choose any one</h3></center>
+    <div class="scoreboard">
+        <div class="score">
+            <p id="you">0</p>
+            <p>You</p>
+        </div>
+        <div class="score">
+            <p id="comp">0</p>
+            <p>comp</p>
+        </div>
+       
+    </div>
+    <h1 id="heading">Welcome</h1>
+<button onclick="rematch()" class="match">Rematch</button>
+        
+    <script src="rockpaper.js"></script>
+</body>
+</html>
